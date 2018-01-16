@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_nothing" translatesAutoresizingMaskIntoConstraints="NO" id="zDu-sO-dsL">
+                                <rect key="frame" x="70" y="70" width="235" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zDu-sO-dsL" secondAttribute="height" multiplier="1:1" id="3D5-2f-bkK"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Oi-Z2-Sxa">
+                                <rect key="frame" x="36" y="335" width="303" height="101"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.92941176469999998" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2Oi-Z2-Sxa" secondAttribute="height" multiplier="3:1" id="Xpr-QL-yb9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pv0-FC-Ipl">
+                                <rect key="frame" x="70" y="466" width="235" height="70"/>
+                                <color key="backgroundColor" red="0.40919718150000001" green="0.88211679460000003" blue="0.8862982988" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="HsQ-5Y-8VY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="TAKE PHOTO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ssk-cR-dj1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pv0-FC-Ipl" secondAttribute="trailing" constant="70" id="HcH-NG-6mr"/>
+                            <constraint firstItem="zDu-sO-dsL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="X4b-5P-Dxt"/>
+                            <constraint firstItem="zDu-sO-dsL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ac5-HQ-nMz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zDu-sO-dsL" secondAttribute="trailing" constant="70" id="acQ-cm-mWI"/>
+                            <constraint firstItem="pv0-FC-Ipl" firstAttribute="top" secondItem="2Oi-Z2-Sxa" secondAttribute="bottom" constant="30" id="bee-13-aYO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Oi-Z2-Sxa" secondAttribute="trailing" constant="36" id="cGR-CT-ii7"/>
+                            <constraint firstItem="pv0-FC-Ipl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="fjz-dU-beW"/>
+                            <constraint firstItem="2Oi-Z2-Sxa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="mKZ-xx-Q3Q"/>
+                            <constraint firstItem="2Oi-Z2-Sxa" firstAttribute="top" secondItem="zDu-sO-dsL" secondAttribute="bottom" constant="30" id="nmr-Bh-V5Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoDisplayImageView" destination="zDu-sO-dsL" id="xEi-Ku-tjt"/>
+                        <outlet property="photoInfoDisplayTextView" destination="2Oi-Z2-Sxa" id="2lF-fm-ROe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="96.7016491754123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_nothing" width="240" height="240"/>
+    </resources>
+</document>
